@@ -1,0 +1,48 @@
+body{
+    background-color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    background-color: white;
+    width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+h2{
+    padding-top: 20px;
+    margin: 20px auto;
+    color: #4b4645; 
+}
+label{
+    display: block;
+    margin: 20px auto;
+    color: #4b4645;
+}
+input{
+    display: block;
+    margin: 20px auto;
+}
+button{
+    margin: 20px auto;
+    padding: 3px 20px;
+    background-color: #4b4645;
+    border-color: #4b4645;
+    color: aliceblue;
+}
+button:hover{
+    background-color: black;
+    cursor: pointer; 
+}
+li{
+    list-style: none;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: aliceblue;
+}

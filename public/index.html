@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ninjago</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Ninjago - a Ninja REST API</h1>
+        <form>
+            <h2>Hire a ninja in your area!</h2>
+            <label for="latitude">Enter your Latitude:</label>
+            <input type="text" id="lat" required>
+            <label for="longtude">Enter your Longitude:</label>
+            <input type="text"  id="lng" required>
+            <button>Find Ninjas</button>
+        </form>
+        <ul class="result">
+                        
+        </ul>
+        <script>
+            const search = document.querySelector('button');
+            const lat = document.getElementById('lat');
+            const lng = document.getElementById('lng');
+            search.addEventListener('click', (e) => {
+                e.preventDefault();
+                const result = document.querySelector('.result');
+                const url = `/api?lng=${lng.value}&lat=${lat.value}`;
+                console.log(url);
+                fetch(url)
+                .then(response => response.json()
+                .then(ninjas => {
+                    console.log(ninjas);
+                    ninjas.forEach(ninja => {
+                        result.innerHTML += `<li>${ninja.name} is available</li>`;
+                    });
+                }))
+                .catch(err => console.log(err));  
+                
+            });
+        </script>
+    </body>
+
+</html>
